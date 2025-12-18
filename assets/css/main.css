@@ -1,7 +1,3 @@
-/* Force nav link text color to black */
-#nav > ul > li > a, #nav > ul > li > span {
-	color: #111 !important;
-}
 #header .header-bg {
 	background: rgba(40, 40, 40, 0.65);
 	border-radius: 18px;
@@ -11,11 +7,6 @@
 	margin-top: 2em;
 }
 
-/*
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -93,12 +84,14 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f0f4f4;
+		background: #15222A;
 		color: #5b5b5b;
 		font-size: 15pt;
 		line-height: 1.85em;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
+		padding-top: 0;
+		margin-top: 0;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -121,7 +114,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
-		color: #483949;
+		color: #15222A;
 		line-height: 1.25em;
 	}
 
@@ -2191,6 +2184,7 @@ input, select, textarea {
 		padding: 0;
 		cursor: default;
 		overflow: hidden;
+		margin-top: 0;
 	}
 	#header .hero-video-bg {
 		position: absolute;
@@ -2206,7 +2200,56 @@ input, select, textarea {
 		z-index: 1;
 		margin: 0;
 		display: inline-block;
-		padding: 7.5em 0 2em 0;
+		padding: 10em 0 2em 0;
+	}
+
+	#header header {
+		text-align: center;
+	}
+
+	#logo {
+		text-decoration: none;
+		border-bottom: none;
+		display: inline-block;
+	}
+
+	#logo:hover {
+		border-bottom: none;
+	}
+
+	.hero-logo {
+		height: 200px;
+		width: auto;
+		display: block;
+		margin: 0 auto;
+		filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.8));
+	}
+
+	.hero-tagline {
+		color: #fff;
+		font-size: 1.4em;
+		margin-top: 1.5em;
+		margin-bottom: 2em;
+		font-weight: 400;
+		text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 4px 20px rgba(0, 0, 0, 0.6);
+		line-height: 1.5;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.hero-button {
+		background: #ADE3E3;
+		border-color: #15222A;
+		color: #15222A;
+		font-weight: 600;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+	}
+
+	.hero-button:hover {
+		background: #95d5d5;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 	}
 
 		#header:before {
@@ -2272,6 +2315,8 @@ input, select, textarea {
 	body.homepage #header {
 		height: 100vh;
 		min-height: 40em;
+		margin-top: 0;
+		padding-top: 0;
 	}
 
 		body.homepage #header h1 {
@@ -2280,7 +2325,7 @@ input, select, textarea {
 
 		body.homepage #header:after {
 			content: '';
-			background: #1C0920;
+			background: #15222A;
 			display: block;
 			position: absolute;
 			left: 0;
@@ -2302,6 +2347,111 @@ input, select, textarea {
 		opacity: 1;
 	}
 
+/* Päis */
+
+	#pais {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: #15222A;
+		z-index: 1000;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+		margin: 0;
+		padding: 0;
+	}
+
+	.pais-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.5em 3em;
+	}
+
+	.pais-logo {
+		height: 80px;
+		width: auto;
+		display: block;
+	}
+
+	.logo-link {
+		display: block;
+		line-height: 0;
+		text-decoration: none;
+		border-bottom: none;
+	}
+
+	.logo-link:hover {
+		border-bottom: none;
+	}
+
+	.pais-nav ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		gap: 2em;
+	}
+
+	.pais-nav li {
+		margin: 0;
+	}
+
+	.pais-nav a {
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.1em;
+		font-weight: 400;
+		padding: 0.5em 1em;
+		display: block;
+		transition: color 0.3s ease, background 0.3s ease;
+		border-radius: 4px;
+		border-bottom: none;
+	}
+
+	.pais-nav a:hover {
+		color: #ADE3E3;
+		background: rgba(173, 227, 227, 0.1);
+		border-bottom: none;
+	}
+
+	/* Responsive päis */
+	@media screen and (max-width: 980px) {
+		.pais-container {
+			padding: 0.5em 2em;
+		}
+
+		.pais-logo {
+			height: 65px;
+		}
+
+		.pais-nav a {
+			font-size: 1em;
+			padding: 0.4em 0.8em;
+		}
+	}
+
+	@media screen and (max-width: 840px) {
+		.pais-container {
+			padding: 0.5em 1.5em;
+		}
+
+		.pais-logo {
+			height: 60px;
+		}
+
+		.pais-nav ul {
+			gap: 1em;
+		}
+
+		.pais-nav a {
+			font-size: 0.95em;
+			padding: 0.4em 0.7em;
+		}
+	}
+
 /* Nav */
 
 	#nav {
@@ -2313,6 +2463,7 @@ input, select, textarea {
 		padding: 1.5em 0 1.5em 0;
 		z-index: 1;
 		overflow: hidden;
+		display: none;
 	}
 
 		#nav > ul {
@@ -2433,8 +2584,8 @@ input, select, textarea {
 	#banner {
 		background: #fff;
 		text-align: center;
-		padding: 4.5em 0 0.5em 0;
-		margin-bottom: 0;
+		padding: 4.5em 0 4.5em 0;
+		margin-bottom: 1.5em;
 	}
 
 		#banner header > p {
@@ -2483,8 +2634,9 @@ input, select, textarea {
 		position: relative;
 		overflow: hidden;
 		padding: 6em 0 6em 0;
-		background: #2b252c;
+		background: #15222A;
 		color: #fff;
+		margin-top: 1.5em;
 	}
 
 		#footer .icon.circled {
@@ -2758,11 +2910,33 @@ input, select, textarea {
 
 /* Mobile */
 
-	#navPanel, #titleBar {
-		display: none;
+	#navPanel, #titleBar, #navButton {
+		display: none !important;
 	}
 
 	@media screen and (max-width: 736px) {
+
+		/* Päis mobile */
+		#pais {
+			position: fixed;
+		}
+
+		.pais-container {
+			padding: 0.5em 1em;
+		}
+
+		.pais-logo {
+			height: 50px;
+		}
+
+		.pais-nav ul {
+			gap: 0.5em;
+		}
+
+		.pais-nav a {
+			font-size: 0.9em;
+			padding: 0.4em 0.6em;
+		}
 
 		/* Basic */
 
@@ -2773,6 +2947,7 @@ input, select, textarea {
 			body, input, textarea, select {
 				font-size: 12.5pt;
 				line-height: 1.5em;
+				padding-top: 0;
 			}
 
 			h2 {
@@ -2879,187 +3054,7 @@ input, select, textarea {
 
 		/* Nav */
 
-			#page-wrapper {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				padding-bottom: 1px;
-			}
-
-			#navButton {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 44px;
-				left: 0;
-				position: fixed;
-				top: 0;
-				width: 100%;
-				z-index: 10001;
-			}
-
-				#navButton .toggle {
-					text-decoration: none;
-					position: absolute;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					border: 0;
-					outline: 0;
-				}
-
-					#navButton .toggle:before {
-						-moz-osx-font-smoothing: grayscale;
-						-webkit-font-smoothing: antialiased;
-						display: inline-block;
-						font-style: normal;
-						font-variant: normal;
-						text-rendering: auto;
-						line-height: 1;
-						text-transform: none !important;
-						font-family: 'Font Awesome 5 Free';
-						font-weight: 900;
-					}
-
-					#navButton .toggle:before {
-						text-decoration: none;
-						font-style: normal;
-						content: '\f0c9';
-						color: #fff;
-						color: rgba(255, 255, 255, 0.75);
-						text-align: center;
-						display: block;
-						font-size: 14px;
-						width: 80px;
-						height: 30px;
-						line-height: 30px;
-						position: absolute;
-						left: 50%;
-						margin-left: -40px;
-						background: rgba(132, 128, 136, 0.75);
-						border-top: 0;
-						border-radius: 0 0 0.35em 0.35em;
-					}
-
-			#navPanel {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transform: translateY(-50vh);
-				-webkit-transform: translateY(-50vh);
-				-ms-transform: translateY(-50vh);
-				transform: translateY(-50vh);
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 50vh;
-				left: 0;
-				overflow-y: auto;
-				position: fixed;
-				top: 0;
-				width: 100%;
-				z-index: 10002;
-				background: #1f1920;
-				box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
-				font-size: 1em;
-			}
-
-				#navPanel:before {
-					content: '';
-					display: block;
-					position: absolute;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					background: url("images/overlay.png");
-					background-size: 128px 128px;
-				}
-
-				#navPanel .link {
-					position: relative;
-					z-index: 1;
-					display: block;
-					text-decoration: none;
-					padding: 0.5em;
-					color: #ddd;
-					border: 0;
-					border-top: dotted 1px rgba(255, 255, 255, 0.05);
-				}
-
-					#navPanel .link:first-child {
-						border-top: 0;
-					}
-
-					#navPanel .link.depth-0 {
-						color: #fff;
-						font-weight: 600;
-					}
-
-				#navPanel .indent-1 {
-					display: inline-block;
-					width: 1em;
-				}
-
-				#navPanel .indent-2 {
-					display: inline-block;
-					width: 2em;
-				}
-
-				#navPanel .indent-3 {
-					display: inline-block;
-					width: 3em;
-				}
-
-				#navPanel .indent-4 {
-					display: inline-block;
-					width: 4em;
-				}
-
-				#navPanel .indent-5 {
-					display: inline-block;
-					width: 5em;
-				}
-
-				#navPanel .depth-0 {
-					color: #fff;
-				}
-
-			body.navPanel-visible #page-wrapper {
-				-moz-transform: translateY(50vh);
-				-webkit-transform: translateY(50vh);
-				-ms-transform: translateY(50vh);
-				transform: translateY(50vh);
-			}
-
-			body.navPanel-visible #navButton {
-				-moz-transform: translateY(50vh);
-				-webkit-transform: translateY(50vh);
-				-ms-transform: translateY(50vh);
-				transform: translateY(50vh);
-			}
-
-			body.navPanel-visible #navPanel {
-				-moz-transform: translateY(0);
-				-webkit-transform: translateY(0);
-				-ms-transform: translateY(0);
-				transform: translateY(0);
-			}
+			/* Mobiilne hamburger menüü on välja lülitatud */
 
 		/* Wrapper */
 
